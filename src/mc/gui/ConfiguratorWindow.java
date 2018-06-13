@@ -247,8 +247,7 @@ public class ConfiguratorWindow extends javax.swing.JFrame implements Programmin
         txtConsole.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         txtConsole.setRows(5);
         jScrollPane1.setViewportView(txtConsole);
-
-        btnRefresh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/view_refresh.png"))); // NOI18N
+        btnRefresh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view_refresh.png"))); // NOI18N
         btnRefresh.setToolTipText("Reload available serial ports");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
