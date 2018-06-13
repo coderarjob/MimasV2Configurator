@@ -10,7 +10,7 @@ main:
 default: main
 
 run:
-	java -cp ${RUNPATH} mc.Main
+	sudo java -cp ${RUNPATH} mc.Main
 
 clean:
 	rm -r bin/*
