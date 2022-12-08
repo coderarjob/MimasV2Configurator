@@ -9,8 +9,23 @@ main:
 
 default: main
 
-run:
-	sudo java -cp ${RUNPATH} mc.Main
+run: jar
+	runas java -jar MimasV2Configurator.jar
+
+jar: main
+	jar cfm MimasV2Configurator.jar Manifest.txt -C bin mc
+
+pack: jar
+	mkdir -p MimasV2Configurator
+	cp -r ./lib MimasV2Configurator
+	cp -r ./icons MimasV2Configurator
+	cp MimasV2Configurator.jar MimasV2Configurator
+	cp MimasV2Configurator.sh MimasV2Configurator
+	cp MimasV2Configurator.bat MimasV2Configurator
+	zip -r MimasV2Configurator.zip ./MimasV2Configurator
+	rm -fr MimasV2Configurator
 
 clean:
-	rm -r bin/*
+	rm -rf bin/*
+	rm -f MimasV2Configurator.jar
+	rm -f MimasV2Configurator.zip
